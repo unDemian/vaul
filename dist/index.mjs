@@ -717,7 +717,7 @@ function useScaleBackground() {
     const timeoutIdRef = React__default.useRef(null);
     const initialBackgroundColor = useMemo(()=>document.body.style.backgroundColor, []);
     function getScale(wrapper) {
-        return (wrapper.clientHeight - WINDOW_TOP_OFFSET) / wrapper.clientHeight;
+        return (wrapper.offsetHeight - WINDOW_TOP_OFFSET) / wrapper.offsetHeight;
     }
     React__default.useEffect(()=>{
         if (isOpen && shouldScaleBackground) {
